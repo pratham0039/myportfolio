@@ -687,17 +687,14 @@ analysis to evaluate and quantify an individual's creative thinking abilities.
     </main>
     <script>
 document.addEventListener("DOMContentLoaded", function () {
-    // Set the preloader delay time in milliseconds
-    const preloaderDelay = 3500; // Adjust this value to set the desired delay (in milliseconds)
+    // Hide the preloader when the content is fully loaded
+    const preloader = document.querySelector(".preloader");
+    const content = document.querySelector(".content");
 
-    // Hide the preloader after the specified delay
-    setTimeout(function () {
-        const preloader = document.querySelector(".preloader");
-        const content = document.querySelector(".content");
-
+    window.addEventListener("load", function () {
         preloader.style.display = "none";
         content.style.display = "block";
-    }, preloaderDelay);
+    });
 });
 
 
